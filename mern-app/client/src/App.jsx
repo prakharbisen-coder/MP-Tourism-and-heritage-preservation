@@ -1,0 +1,60 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+
+// Pages
+import Home from './pages/Home';
+import Monasteries from './pages/Monasteries';
+import VirtualTours from './pages/VirtualTours';
+import Itinerary from './pages/Itinerary';
+import Events from './pages/Events';
+import Chatbot from './pages/Chatbot';
+import Login from './pages/Login';
+import UserDashboard from './pages/UserDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import Preservation from './pages/Preservation';
+
+function App() {
+  return (
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/" element={<Home />} />
+      <Route path="/monasteries" element={<Monasteries />} />
+      <Route path="/virtual-tours" element={<VirtualTours />} />
+      <Route path="/events" element={<Events />} />
+      <Route path="/chatbot" element={<Chatbot />} />
+      <Route path="/login" element={<Login />} />
+      
+      {/* Protected User Routes */}
+      <Route path="/itinerary" element={<Itinerary />} />
+      <Route
+        path="/user"
+        element={
+          <ProtectedRoute>
+            <UserDashboard />
+          </ProtectedRoute>
+        }
+      />
+      
+      {/* Protected Admin Routes */}
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute adminOnly={true}>
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/preservation"
+        element={
+          <ProtectedRoute adminOnly={true}>
+            <Preservation />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
+
+export default App;
