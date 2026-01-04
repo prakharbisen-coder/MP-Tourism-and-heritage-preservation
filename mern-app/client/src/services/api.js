@@ -62,6 +62,7 @@ export const storyAPI = {
 // Itinerary APIs
 export const itineraryAPI = {
   generateItinerary: (data) => api.post('/itinerary/generate', data),
+  searchItineraries: (params) => api.get('/itinerary/search', { params }),
   getMyItineraries: () => api.get('/itinerary/my-itineraries'),
   getItinerary: (id) => api.get(`/itinerary/${id}`),
   deleteItinerary: (id) => api.delete(`/itinerary/${id}`)

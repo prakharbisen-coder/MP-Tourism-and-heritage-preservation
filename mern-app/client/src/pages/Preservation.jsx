@@ -96,22 +96,27 @@ const Preservation = () => {
       captureDate: captureDate || new Date().toISOString().split('T')[0],
       camera: cameraDetails,
       notes: additionalNotes,
+      // Don't store preview or file in the saved list to avoid quota issues
+    };
+    
+    // Add to baseline list (with preview for current session)
+    const displayBaseline = {
+      ...newBaseline,
       preview: baselinePreview,
       file: baselineFile
     };
+    setBaselineList([...baselineList, displayBaseline]);
     
-    // Add to baseline list
-    const updatedList = [...baselineList, newBaseline];
-    setBaselineList(updatedList);
+    // Save to localStorage WITHOUT preview data to avoid quota issues
+    try {
+      const savedList = [...baselineList, newBaseline];
+      localStorage.setItem('savedBaselines', JSON.stringify(savedList));
+      setUploadStatus('✓ Baseline image saved successfully!');
+    } catch (error) {
+      console.error('LocalStorage error:', error);
+      setUploadStatus('✓ Baseline recorded (preview not persisted)');
+    }
     
-    // Save to localStorage (without file object)
-    localStorage.setItem('savedBaselines', JSON.stringify(updatedList.map(b => ({
-      ...b,
-      file: null,
-      preview: b.preview // Keep preview for display
-    }))));
-    
-    setUploadStatus('✓ Baseline image saved successfully!');
     setLoading(false);
     
     // Auto-switch to comparison tab
@@ -140,15 +145,29 @@ const Preservation = () => {
     setBaselineName(baseline.name);
     setBaselineLocation(baseline.location);
     setStructureComponent(baseline.structure);
-    setBaselinePreview(baseline.preview);
-    setBaselineFile(baseline.file);
+    // Note: Preview and file may not be available for previously saved baselines
+    if (baseline.preview) {
+      setBaselinePreview(baseline.preview);
+    } else {
+      setBaselinePreview(null);
+    }
+    if (baseline.file) {
+      setBaselineFile(baseline.file);
+    } else {
+      setBaselineFile(null);
+    }
     setShowBaselineDropdown(false);
   };
 
   // Perform comparison
   const handleComparison = async () => {
-    if (!comparisonFile || !baselineFile) {
-      alert('Please upload both baseline and comparison images');
+    if (!comparisonFile) {
+      alert('Please upload a comparison image');
+      return;
+    }
+
+    if (!baselineFile) {
+      alert('The selected baseline was loaded from saved data and the image file is no longer available. Please go to the "Upload Baseline" tab and upload the baseline image again to create a fresh baseline, then return here to compare.');
       return;
     }
 
@@ -342,9 +361,25 @@ const Preservation = () => {
                 <h2 style={{ color: '#2c3e50', marginBottom: '10px', fontSize: '24px', fontWeight: 'bold' }}>
                   📊 Upload Baseline Image
                 </h2>
-                <p style={{ color: '#666', fontSize: '14px', margin: 0 }}>
+                <p style={{ color: '#666', fontSize: '14px', marginBottom: '15px' }}>
                   Upload a reference image that will serve as the baseline for future comparisons. This should be a high-quality image of the structure in its current state.
                 </p>
+                <div style={{
+                  background: '#e3f2fd',
+                  border: '1px solid #90caf9',
+                  borderRadius: '8px',
+                  padding: '12px 16px',
+                  fontSize: '13px',
+                  color: '#1976d2',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '10px'
+                }}>
+                  <span style={{ fontSize: '16px', flexShrink: 0 }}>ℹ️</span>
+                  <div>
+                    <strong>Note:</strong> Baseline metadata is saved locally, but image previews are session-only to prevent storage quota issues. You'll need to re-upload images for comparison in future sessions.
+                  </div>
+                </div>
               </div>
 
               {/* Baseline Image Upload */}
@@ -728,17 +763,33 @@ const Preservation = () => {
                           }}
                         >
                           {/* Thumbnail */}
-                          <img
-                            src={baseline.preview}
-                            alt={baseline.name}
-                            style={{
+                          {baseline.preview ? (
+                            <img
+                              src={baseline.preview}
+                              alt={baseline.name}
+                              style={{
+                                width: '80px',
+                                height: '80px',
+                                objectFit: 'cover',
+                                borderRadius: '6px',
+                                border: '2px solid #e0e0e0'
+                              }}
+                            />
+                          ) : (
+                            <div style={{
                               width: '80px',
                               height: '80px',
-                              objectFit: 'cover',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              background: '#f0f0f0',
                               borderRadius: '6px',
-                              border: '2px solid #e0e0e0'
-                            }}
-                          />
+                              border: '2px solid #e0e0e0',
+                              fontSize: '32px'
+                            }}>
+                              📷
+                            </div>
+                          )}
                           
                           {/* Details */}
                           <div style={{ flex: 1 }}>
@@ -803,6 +854,30 @@ const Preservation = () => {
                   <h3 style={{ color: '#2c3e50', marginBottom: '20px', fontSize: '16px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     📋 Baseline Details
                   </h3>
+                  
+                  {/* Warning if baseline file is not available */}
+                  {!baselineFile && (
+                    <div style={{
+                      background: '#fff3cd',
+                      border: '1px solid #ffc107',
+                      borderRadius: '8px',
+                      padding: '15px',
+                      marginBottom: '20px',
+                      display: 'flex',
+                      alignItems: 'start',
+                      gap: '12px'
+                    }}>
+                      <span style={{ fontSize: '20px' }}>⚠️</span>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ color: '#856404', fontWeight: '600', marginBottom: '5px', fontSize: '14px' }}>
+                          Baseline Image Not Available
+                        </div>
+                        <div style={{ color: '#856404', fontSize: '13px', lineHeight: '1.5' }}>
+                          This baseline was loaded from saved data and the image file is no longer available in memory. To run a comparison, please go to the "Upload Baseline" tab and upload the baseline image again.
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   
                   <div style={{ display: 'grid', gridTemplateColumns: '250px 1fr', gap: '20px' }}>
                     {/* Baseline Image Preview */}

@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Preservation from './pages/Preservation';
+import Navigation from './pages/Navigation';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* Public Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/monasteries" element={<Monasteries />} />
+      <Route path="/navigation" element={<Navigation />} />
       <Route path="/virtual-tours" element={<VirtualTours />} />
       <Route path="/events" element={<Events />} />
       <Route path="/chatbot" element={<Chatbot />} />

@@ -20,18 +20,35 @@ exports.chat = async (req, res) => {
     const geminiResponse = await axios.post(geminiUrl, {
       contents: [{
         parts: [{
-          text: `You are a knowledgeable assistant specializing in Sikkim's monastery heritage, Buddhist culture, and historical preservation. 
-          
+          text: `You are a knowledgeable assistant specializing in Sikkim's monastery heritage, Buddhist culture, and historical preservation.
+
+IMPORTANT FORMATTING INSTRUCTIONS:
+- Use clear headers with emoji icons (🏛️, 📍, 📅, 📜, etc.)
+- Structure responses with sections separated by divider lines (───────────────────)
+- Use bullet points (•) for lists
+- Add numbered sections for step-by-step information
+- Include proper spacing between sections
+- Highlight important terms with **bold** text
+- Keep responses detailed but well-organized
+
 User Question: ${message}
 
-Please provide detailed, accurate, and helpful information about Sikkim's monasteries, their history, cultural significance, and preservation efforts. If the question is not related to monasteries or Sikkim's heritage, politely redirect the conversation to these topics.`
+Please provide a comprehensive, well-structured response with:
+1. A clear header indicating the topic
+2. Key information organized in sections
+3. Historical context with dates and significance
+4. Relevant cultural or religious details
+5. Practical information if applicable (visiting hours, location details, etc.)
+6. Suggestions for related information or follow-up questions
+
+If the question is not related to monasteries or Sikkim's heritage, politely redirect the conversation to these topics while still being helpful.`
         }]
       }],
       generationConfig: {
         temperature: 0.7,
         topK: 40,
         topP: 0.95,
-        maxOutputTokens: 1024,
+        maxOutputTokens: 1500,
       },
       safetySettings: [
         {

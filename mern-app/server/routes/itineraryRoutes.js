@@ -5,10 +5,14 @@ const {
   generateItinerary,
   getMyItineraries,
   getItinerary,
-  deleteItinerary
+  deleteItinerary,
+  searchItineraries
 } = require('../controllers/itineraryController');
 
-// All routes are protected
+// Public route for search
+router.get('/search', searchItineraries);
+
+// Protected routes
 router.post('/generate', protect, generateItinerary);
 router.get('/my-itineraries', protect, getMyItineraries);
 router.get('/:id', protect, getItinerary);

@@ -12,6 +12,44 @@ const FloatingChatbot = () => {
   const [isOfflineMode, setIsOfflineMode] = useState(false);
   const messagesEndRef = useRef(null);
 
+  // Function to format message text with markdown-like rendering
+  const formatMessage = (text) => {
+    // Split by lines
+    const lines = text.split('\n');
+    const elements = [];
+    
+    lines.forEach((line, index) => {
+      // Bold text (**text**)
+      const boldRegex = /\*\*(.*?)\*\*/g;
+      let lastIndex = 0;
+      const parts = [];
+      let match;
+      
+      while ((match = boldRegex.exec(line)) !== null) {
+        if (match.index > lastIndex) {
+          parts.push(line.substring(lastIndex, match.index));
+        }
+        parts.push(<strong key={`bold-${index}-${match.index}`}>{match[1]}</strong>);
+        lastIndex = boldRegex.lastIndex;
+      }
+      
+      if (lastIndex < line.length) {
+        parts.push(line.substring(lastIndex));
+      }
+      
+      // Check for special formatting
+      if (line.trim().startsWith('•') || line.trim().startsWith('─')) {
+        elements.push(<div key={index} style={{ margin: '2px 0' }}>{parts.length > 0 ? parts : line}</div>);
+      } else if (line.trim() === '') {
+        elements.push(<br key={index} />);
+      } else {
+        elements.push(<div key={index} style={{ margin: '4px 0' }}>{parts.length > 0 ? parts : line}</div>);
+      }
+    });
+    
+    return elements;
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -216,12 +254,12 @@ const FloatingChatbot = () => {
                     boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
                     fontSize: message.type === 'system' ? '12px' : '14px',
                     fontStyle: message.type === 'system' ? 'italic' : 'normal',
-                    lineHeight: '1.5',
+                    lineHeight: '1.6',
                     wordWrap: 'break-word',
-                    whiteSpace: 'pre-wrap'
+                    fontFamily: message.type === 'bot' ? 'system-ui, -apple-system, sans-serif' : 'inherit'
                   }}
                 >
-                  {message.text}
+                  {message.type === 'bot' ? formatMessage(message.text) : message.text}
                 </div>
               </div>
             ))}

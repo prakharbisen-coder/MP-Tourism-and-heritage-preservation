@@ -11,6 +11,44 @@ const Chatbot = () => {
   const [loading, setLoading] = useState(false);
   const [isOfflineMode, setIsOfflineMode] = useState(false);
 
+  // Function to format message text with markdown-like rendering
+  const formatMessage = (text) => {
+    // Split by lines
+    const lines = text.split('\n');
+    const elements = [];
+    
+    lines.forEach((line, index) => {
+      // Bold text (**text**)
+      const boldRegex = /\*\*(.*?)\*\*/g;
+      let lastIndex = 0;
+      const parts = [];
+      let match;
+      
+      while ((match = boldRegex.exec(line)) !== null) {
+        if (match.index > lastIndex) {
+          parts.push(line.substring(lastIndex, match.index));
+        }
+        parts.push(<strong key={`bold-${index}-${match.index}`}>{match[1]}</strong>);
+        lastIndex = boldRegex.lastIndex;
+      }
+      
+      if (lastIndex < line.length) {
+        parts.push(line.substring(lastIndex));
+      }
+      
+      // Check for special formatting
+      if (line.trim().startsWith('•') || line.trim().startsWith('─')) {
+        elements.push(<div key={index} style={{ margin: '2px 0' }}>{parts.length > 0 ? parts : line}</div>);
+      } else if (line.trim() === '') {
+        elements.push(<br key={index} />);
+      } else {
+        elements.push(<div key={index} style={{ margin: '4px 0' }}>{parts.length > 0 ? parts : line}</div>);
+      }
+    });
+    
+    return elements;
+  };
+
   const toggleMode = () => {
     const newMode = !isOfflineMode;
     setIsOfflineMode(newMode);
@@ -87,23 +125,25 @@ const Chatbot = () => {
                 <div key={index} style={{ marginBottom: '15px', textAlign: msg.type === 'user' ? 'right' : msg.type === 'system' ? 'center' : 'left' }}>
                   <div style={{
                     display: 'inline-block',
-                    padding: '10px 15px',
+                    padding: '12px 18px',
                     borderRadius: '10px',
                     background: msg.type === 'user' ? '#007bff' : msg.type === 'system' ? '#ffc107' : '#e9ecef',
                     color: msg.type === 'user' ? 'white' : msg.type === 'system' ? '#000' : 'black',
-                    maxWidth: msg.type === 'system' ? '90%' : '70%',
-                    whiteSpace: 'pre-wrap',
+                    maxWidth: msg.type === 'system' ? '90%' : '75%',
                     fontStyle: msg.type === 'system' ? 'italic' : 'normal',
-                    fontSize: msg.type === 'system' ? '13px' : '14px'
+                    fontSize: msg.type === 'system' ? '13px' : '14px',
+                    lineHeight: '1.6',
+                    textAlign: 'left',
+                    fontFamily: msg.type === 'bot' ? 'system-ui, -apple-system, sans-serif' : 'inherit'
                   }}>
-                    {msg.text}
+                    {msg.type === 'bot' ? formatMessage(msg.text) : msg.text}
                   </div>
                 </div>
               ))}
               {loading && (
                 <div style={{ textAlign: 'left' }}>
                   <div style={{ display: 'inline-block', padding: '10px 15px', borderRadius: '10px', background: '#e9ecef' }}>
-                    Typing...
+                    <span style={{ opacity: 0.6 }}>Thinking...</span>
                   </div>
                 </div>
               )}

@@ -20,6 +20,7 @@ const Navbar = () => {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/monasteries">Monasteries</Link></li>
+          <li><Link to="/navigation">Navigation</Link></li>
           <li><Link to="/virtual-tours">Virtual Tours</Link></li>
           <li><Link to="/events">Events</Link></li>
           <li><Link to="/itinerary">Travel Itinerary</Link></li>
@@ -48,6 +49,7 @@ const Navbar = () => {
         <ul>
           <li><Link to="/" onClick={() => setSideMenuOpen(false)}>Home</Link></li>
           <li><Link to="/monasteries" onClick={() => setSideMenuOpen(false)}>Monasteries</Link></li>
+          <li><Link to="/navigation" onClick={() => setSideMenuOpen(false)}>Navigation</Link></li>
           <li><Link to="/virtual-tours" onClick={() => setSideMenuOpen(false)}>Virtual Tours</Link></li>
           <li><Link to="/events" onClick={() => setSideMenuOpen(false)}>Events</Link></li>
           <li><Link to="/itinerary" onClick={() => setSideMenuOpen(false)}>Travel Itinerary</Link></li>
