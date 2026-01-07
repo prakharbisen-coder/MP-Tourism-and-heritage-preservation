@@ -200,7 +200,7 @@ const AdminDashboard = () => {
             boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
           }}>
             <h1 style={{ margin: 0, fontSize: '2rem' }}>Admin Dashboard</h1>
-            <p style={{ margin: '10px 0 0', opacity: 0.9 }}>Welcome, {user?.name}! Manage your monastery heritage platform</p>
+            <p style={{ margin: '10px 0 0', opacity: 0.9 }}>Welcome, {user?.name}! Manage your heritage tourism platform</p>
           </div>
 
           {/* Tabs */}

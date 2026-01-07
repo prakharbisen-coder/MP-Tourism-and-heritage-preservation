@@ -5,7 +5,7 @@ import { getOfflineResponse } from '../utils/offlineChatbot';
 const FloatingChatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { type: 'bot', text: 'Namaste! Welcome to Sikkim Monastery Heritage Portal. Toggle between Online (AI) and Offline (Local Data) modes.' }
+    { type: 'bot', text: 'Namaste! Welcome to Madhya Pradesh Heritage Portal. Toggle between Online (AI) and Offline (Local Data) modes.' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);

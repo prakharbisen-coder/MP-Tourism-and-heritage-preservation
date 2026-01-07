@@ -15,6 +15,13 @@ const itineraryRoutes = require('./routes/itineraryRoutes');
 const chatbotRoutes = require('./routes/chatbotRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
 const preservationRoutes = require('./routes/preservationRoutes');
+const propertyRoutes = require('./routes/propertyRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
+const adminRoutes = require('./routes/adminRoutes');
+
+// Import cron jobs
+require('./utils/cronJobs');
 
 const app = express();
 
@@ -43,12 +50,16 @@ app.use('/api/itinerary', itineraryRoutes);
 app.use('/api/chatbot', chatbotRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/preservation', preservationRoutes);
+app.use('/api/properties', propertyRoutes);
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/payments', paymentRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Monastery Heritage API is running',
+    message: 'Madhya Pradesh Heritage API is running',
     timestamp: new Date().toISOString()
   });
 });

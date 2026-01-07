@@ -9,7 +9,7 @@ const Itinerary = () => {
   const [activeTab, setActiveTab] = useState('generate');
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-  
+
   // Filter states
   const [filters, setFilters] = useState({
     days: 3,
@@ -77,7 +77,7 @@ const Itinerary = () => {
 
   const downloadItinerary = () => {
     if (!generatedItinerary) return;
-    
+
     const content = `
 ${generatedItinerary.monastery_name} - ${generatedItinerary.days} Day Itinerary
 ${'='.repeat(60)}
@@ -103,7 +103,7 @@ ${generatedItinerary.daily_plan}
 Notes:
 ${generatedItinerary.notes}
     `;
-    
+
     const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -115,13 +115,13 @@ ${generatedItinerary.notes}
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb' }}>
       <Navbar />
-      
+
       <div style={{ paddingTop: '80px', paddingBottom: '60px', paddingLeft: '20px', paddingRight: '20px' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h1 style={{ fontSize: '36px', fontWeight: 'bold', color: '#1f2937', marginBottom: '10px' }}>
-              Plan Your Monastery Journey
+              Plan Your Heritage Journey
             </h1>
             <p style={{ fontSize: '18px', color: '#6b7280' }}>
               Create personalized itineraries based on your preferences
@@ -168,9 +168,9 @@ ${generatedItinerary.notes}
           {activeTab === 'generate' && (
             <div>
               {/* Filters Section */}
-              <div style={{ 
-                backgroundColor: 'white', 
-                borderRadius: '12px', 
+              <div style={{
+                backgroundColor: 'white',
+                borderRadius: '12px',
                 padding: '30px',
                 boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
                 marginBottom: '30px'
@@ -178,9 +178,9 @@ ${generatedItinerary.notes}
                 <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937', marginBottom: '20px' }}>
                   Select Your Preferences
                 </h2>
-                
-                <div style={{ 
-                  display: 'grid', 
+
+                <div style={{
+                  display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
                   gap: '20px',
                   marginBottom: '20px'
@@ -412,7 +412,7 @@ ${generatedItinerary.notes}
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                     <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1f2937' }}>
-                      {generatedItinerary.monastery_name || 'Monastery Itinerary'}
+                      {generatedItinerary.monastery_name || 'Heritage Itinerary'}
                     </h2>
                     <button
                       onClick={downloadItinerary}
@@ -583,7 +583,7 @@ ${generatedItinerary.notes}
                       <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '15px' }}>
                         {item.destination} • {item.days} Days
                       </p>
-                      
+
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '15px' }}>
                         <span style={{
                           padding: '4px 12px',

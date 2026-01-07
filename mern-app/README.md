@@ -1,6 +1,6 @@
-# Have-In-Sikkim - Full Stack MERN Application
+# Explore MP - Full Stack MERN Application
 
-A complete MERN stack application for exploring and preserving Sikkim's monastery heritage. Features include virtual tours, AI chatbot, user contributions, admin moderation, and travel itinerary planning.
+A complete MERN stack application for exploring and preserving Madhya Pradesh's rich cultural heritage. Features include virtual tours, AI chatbot, user contributions, admin moderation, and travel itinerary planning.
 
 ## 🚀 Features
 
@@ -96,8 +96,8 @@ Frontend runs on **http://localhost:5173**
 
 | Role  | Email                    | Password  | Access               |
 |-------|--------------------------|-----------|----------------------|
-| Admin | admin@monastery.com      | admin123  | Full admin access    |
-| User  | user@monastery.com       | user123   | User dashboard only  |
+| Admin | admin@mpheritage.com     | admin123  | Full admin access   |
+| User  | user@mpheritage.com      | user123   | User dashboard only |
 
 ## 📂 Project Structure
 
@@ -263,7 +263,7 @@ To enable interactive map:
 
 ## 📝 Notes
 
-- Default MongoDB connection: `mongodb://localhost:27017/monastery_heritage`
+- Default MongoDB connection: `mongodb://localhost:27017/mp_heritage`
 - Backend server runs on port 5000
 - Frontend dev server runs on port 5173
 - Vite proxy configured for API calls
@@ -291,4 +291,4 @@ For issues or questions, please check the documentation or create an issue.
 
 ---
 
-**Built with ❤️ for preserving Sikkim's monastery heritage**
+**Built with ❤️ for preserving Madhya Pradesh's rich cultural heritage**

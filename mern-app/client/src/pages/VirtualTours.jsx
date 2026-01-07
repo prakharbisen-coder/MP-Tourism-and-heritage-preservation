@@ -6,97 +6,87 @@ import { ExternalLink } from 'lucide-react';
 // Monasteries with virtual tour links
 const virtualTourMonasteries = [
   {
-    name: "Rumtek Monastery",
-    location: "Gangtok, East Sikkim",
-    description: "The largest monastery in Sikkim; seat of the Karmapa Lama. Experience the grand architecture and spiritual atmosphere.",
-    image: "img/RumtekMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Kagyu",
-    founded: "16th century (rebuilt in 1960s)"
+    name: "Khajuraho Temples",
+    location: "Chhatarpur District",
+    description: "Explore the intricate sculptures and nagara-style architecture of the Kandariya Mahadev Temple.",
+    image: "/img/khajuraho.png",
+    tourUrl: "https://www.google.com/maps/@24.8519783,79.9200404,2a,75y,260h,90t/data=!3m7!1e1!3m5!1sCAoSLEFGMVFpcE9XbzE0LUcxbkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DCAoSLEFGMVFpcE9XbzE0LUcxbkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1QkF1%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D260%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",
+    sect: "Hindu/Jain",
+    founded: "950-1050 CE"
   },
   {
-    name: "Pemayangtse Monastery",
-    location: "Pelling, West Sikkim",
-    description: "Historic Nyingma monastery with stunning views of Kanchenjunga. Explore the ancient wooden structures and sacred halls.",
-    image: "img/PemayangtseMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9096?scene_id=25712",
-    sect: "Nyingma",
-    founded: "1705"
+    name: "Sanchi Stupa",
+    location: "Raisen District",
+    description: "Walk around the Great Stupa and ancient gateways commissioned by Emperor Ashoka.",
+    image: "/img/sanchi_stupa.png",
+    tourUrl: "/ar-tour",
+    sect: "Buddhist",
+    founded: "3rd Century BCE"
   },
   {
-    name: "Enchey Monastery",
-    location: "Gangtok, East Sikkim",
-    description: "Gangtok's famed Nyingma monastery with beautiful murals and peaceful surroundings.",
-    image: "img/EncheyMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Nyingma",
-    founded: "1909"
+    name: "Gwalior Fort",
+    location: "Gwalior",
+    description: "Experience the grandeur of the Man Singh Palace and ancient temples within the fort walls.",
+    image: "/img/gwalior_fort.png",
+    tourUrl: "https://www.google.com/maps/@26.2300407,78.1685899,2a,75y,100h,90t/data=!3m7!1e1!3m5!1sCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D100%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",
+    sect: "Historical",
+    founded: "8th Century CE"
   },
   {
-    name: "Tashiding Monastery",
-    location: "Near Yuksom, West Sikkim",
-    description: "The holiest monastery in Sikkim. Virtual tour of sacred stupas and prayer halls on the hilltop.",
-    image: "img/TashidingMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Nyingma",
-    founded: "1641"
+    name: "Bhimbetka Rock Shelters",
+    location: "Raisen District",
+    description: "Step back in time to view prehistoric cave paintings in their natural setting.",
+    image: "/img/bhimbetka.png",
+    tourUrl: "https://www.google.com/maps/@22.9372,77.6127,2a,75y,180h,90t/data=!3m7!1e1!3m5!1sCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D180%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",
+    sect: "Prehistoric",
+    founded: "Paleolithic"
   },
   {
-    name: "Phodong Monastery",
-    location: "North Sikkim",
-    description: "18th-century Kagyu monastery famed for frescoes and festivals. Explore the intricate artwork and architecture.",
-    image: "img/PhodongMonastery.jpg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Kagyu",
-    founded: "1740"
+    name: "Orchha Fort",
+    location: "Niwari District",
+    description: "Wander through the Jahangir Mahal and Raja Mahal in this medieval architectural marvel.",
+    image: "/img/orchha_fort.png",
+    tourUrl: "https://www.google.com/maps/@25.3508,78.6415,2a,75y,300h,90t/data=!3m7!1e1!3m5!1sCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D300%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",
+    sect: "Historical",
+    founded: "16th Century"
   },
   {
-    name: "Ralong Monastery",
-    location: "South Sikkim",
-    description: "Known for the Kagyed Dance Festival. Experience the monastery's spiritual ambiance and beautiful surroundings.",
-    image: "img/RalongMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Kagyu",
-    founded: "18th century"
-  },
-  {
-    name: "Dubdi Monastery",
-    location: "Yuksom, West Sikkim",
-    description: "First monastery of Sikkim (1701). Take a virtual journey to this historic hilltop monastery.",
-    image: "img/DubdiMonastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Nyingma",
-    founded: "1701"
-  },
-  {
-    name: "Lachen Monastery",
-    location: "Lachen, North Sikkim",
-    description: "Ngodrub Choling (1858), spiritual center for Lachenpas. Explore the remote mountain monastery.",
-    image: "img/Lachen_Monastery.jpeg",
-    tourUrl: "https://www.360easyvr.com/vr/9098?scene_id=25635",
-    sect: "Nyingma",
-    founded: "1858"
+    name: "Jahaz Mahal",
+    location: "Mandu",
+    description: "Explore the Ship Palace 'floating' between two lakes in the historic city of Mandu.",
+    image: "/img/jahaz_mahal.png",
+    tourUrl: "https://www.google.com/maps/@22.3670,75.4045,2a,75y,40h,90t/data=!3m7!1e1!3m5!1sCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DCAoSLEFGMVFpcE9lX1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4X1l4%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D40%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",
+    sect: "Afghan Architecture",
+    founded: "15th Century"
   }
 ];
 
+import { useNavigate } from 'react-router-dom';
+
 const VirtualTours = () => {
+  const navigate = useNavigate();
+
   const handleTourClick = (tourUrl) => {
-    window.open(tourUrl, '_blank', 'noopener,noreferrer');
+    if (tourUrl.startsWith('/')) {
+      navigate(tourUrl);
+    } else {
+      window.open(tourUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb' }}>
       <Navbar />
-      
+
       <div style={{ paddingTop: '80px', paddingBottom: '60px', paddingLeft: '20px', paddingRight: '20px' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <h1 style={{ fontSize: '42px', fontWeight: 'bold', color: '#1f2937', marginBottom: '15px' }}>
-              360° Virtual Tours
+              MP Heritage 360° Tours
             </h1>
             <p style={{ fontSize: '18px', color: '#6b7280', maxWidth: '700px', margin: '0 auto' }}>
-              Experience immersive 360° virtual tours of Sikkim's beautiful monasteries from anywhere in the world
+              Experience immersive 360° virtual tours of Madhya Pradesh's magnificent heritage sites from anywhere in the world
             </p>
           </div>
 
@@ -168,7 +158,7 @@ const VirtualTours = () => {
                   }}>
                     {monastery.name}
                   </h3>
-                  
+
                   <div style={{
                     display: 'flex',
                     gap: '15px',

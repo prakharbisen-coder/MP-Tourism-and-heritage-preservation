@@ -58,7 +58,7 @@ function App() {
       {/* Header */}
       <header className="app-header">
         <div className="header-content">
-          <h1>🏛️ Monastery Preservation System</h1>
+          <h1>🏛️ Heritage Preservation System</h1>
           <p className="header-subtitle">AI-Powered Structural Change Detection & Analysis</p>
         </div>
         

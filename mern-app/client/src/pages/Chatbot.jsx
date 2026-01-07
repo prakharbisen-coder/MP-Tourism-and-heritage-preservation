@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { type: 'bot', text: '🙏 Namaste! Ask me about any Sikkim monastery. Toggle between Online (AI) and Offline (Local Data) modes.' }
+    { type: 'bot', text: '🙏 Namaste! Ask me about any Madhya Pradesh heritage site. Toggle between Online (AI) and Offline (Local Data) modes.' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);

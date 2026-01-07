@@ -75,7 +75,7 @@ const Login = () => {
           maxWidth: '400px'
         }}>
           <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
-            {isSignup ? 'Create Account' : 'Login to Have-In-Sikkim'}
+            {isSignup ? 'Create Account' : 'Login to Explore MP'}
           </h2>
 
           {error && (
@@ -194,8 +194,8 @@ const Login = () => {
           {!isSignup && (
             <div style={{ marginTop: '20px', textAlign: 'center', fontSize: '14px', color: '#666' }}>
               <p><strong>Demo Credentials:</strong></p>
-              <p>Admin: admin@monastery.com / admin123</p>
-              <p>User: user@monastery.com / user123</p>
+              <p>Admin: admin@mpheritage.com / admin123</p>
+              <p>User: user@mpheritage.com / user123</p>
             </div>
           )}
 

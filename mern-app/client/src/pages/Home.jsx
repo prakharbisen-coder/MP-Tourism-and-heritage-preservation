@@ -12,127 +12,127 @@ const Home = () => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
 
-  // Sikkim Monasteries with coordinates
+  // Madhya Pradesh Heritage Sites with coordinates
   const monasteries = [
     {
       id: 1,
-      name: 'Rumtek Monastery',
-      lat: 27.305827,
-      lng: 88.53637,
-      description: 'The largest monastery in Sikkim, seat of the Karmapa Lama.',
-      image: './img/RumtekMonastery.jpeg'
+      name: 'Khajuraho Temples',
+      lat: 24.8318,
+      lng: 79.9199,
+      description: 'UNESCO World Heritage Site famous for stunning temple architecture.',
+      image: '/img/khajuraho.png'
     },
     {
       id: 2,
-      name: 'Pemayangtse Monastery',
-      lat: 27.305,
-      lng: 88.252,
-      description: 'One of the oldest monasteries, founded in 1705, near Pelling.',
-      image: './img/PemayangtseMonastery.jpeg'
+      name: 'Mahakaleshwar Temple',
+      lat: 23.1765,
+      lng: 75.7683,
+      description: 'One of the 12 Jyotirlingas in Ujjain, highly revered Shiva temple.',
+      image: '/img/mahakaleshwar.png'
     },
     {
       id: 3,
-      name: 'Tashiding Monastery',
-      lat: 27.3089,
-      lng: 88.2979,
-      description: 'Considered the holiest monastery in Sikkim, built in 1641.',
-      image: './img/TashidingMonastery.jpeg'
+      name: 'Omkareshwar Temple',
+      lat: 22.2403,
+      lng: 76.1351,
+      description: 'Sacred Jyotirlinga temple on an island shaped like Om symbol.',
+      image: '/img/omkareshwar.png'
     },
     {
       id: 4,
-      name: 'Enchey Monastery',
-      lat: 27.3359,
-      lng: 88.6192,
-      description: 'Located near Gangtok, famous for its religious festivals.',
-      image: './img/EncheyMonastery.jpeg'
+      name: 'Sanchi Stupa',
+      lat: 23.4794,
+      lng: 77.7391,
+      description: 'Ancient Buddhist complex commissioned by Emperor Ashoka.',
+      image: '/img/sanchi_stupa.png'
     },
     {
       id: 5,
-      name: 'Phodong Monastery',
-      lat: 27.416786,
-      lng: 88.582944,
-      description: 'Built in the 18th century, known for annual mask dance festivals.',
-      image: './img/PhodongMonastery.jpg'
+      name: 'Gwalior Fort',
+      lat: 26.2295,
+      lng: 78.1779,
+      description: 'One of India\'s most impregnable fortresses with magnificent palaces.',
+      image: '/img/gwalior_fort.png'
     },
     {
       id: 6,
-      name: 'Ralong Monastery',
-      lat: 27.325734,
-      lng: 88.325734,
-      description: 'A Kagyu sect monastery, known for its grand architecture.',
-      image: './img/RalongMonastery.jpeg'
+      name: 'Orchha Fort Complex',
+      lat: 25.3519,
+      lng: 78.6420,
+      description: 'Medieval fort complex showcasing Bundela Rajput architecture.',
+      image: '/img/orchha_fort.png'
     },
     {
       id: 7,
-      name: 'Labrang Monastery',
-      lat: 27.418881,
-      lng: 88.581438,
-      description: 'Small but historic monastery near Phodong.',
-      image: './img/LabrangMonastery.jpg'
+      name: 'Jahaz Mahal',
+      lat: 22.3623,
+      lng: 75.3965,
+      description: 'Ship Palace in Mandu appearing to float between two lakes.',
+      image: '/img/jahaz_mahal.png'
     },
     {
       id: 8,
-      name: 'Dubdi Monastery',
-      lat: 27.366206,
-      lng: 88.230086,
-      description: 'Built in 1701, the oldest monastery in Sikkim, near Yuksom.',
-      image: './img/DubdiMonastery.jpeg'
+      name: 'Bhimbetka Rock Shelters',
+      lat: 22.9422,
+      lng: 77.6111,
+      description: 'UNESCO site with ancient rock paintings over 30,000 years old.',
+      image: '/img/bhimbetka.png'
     },
     {
       id: 9,
-      name: 'Kartok Monastery',
-      lat: 27.33,
-      lng: 88.62,
-      description: 'Situated at Yuksom, dedicated to Kartok Lama.',
-      image: './img/KartokMonastery.jpg'
+      name: 'Kandariya Mahadev Temple',
+      lat: 24.8520,
+      lng: 79.9199,
+      description: 'Largest temple in Khajuraho, epitome of Chandela architecture.',
+      image: '/img/khajuraho.png'
     },
     {
       id: 10,
-      name: 'Rinchenpong Monastery',
-      lat: 27.2345,
-      lng: 88.2721,
-      description: 'Known for its beautiful sunset views over Kanchenjunga.',
-      image: './img/rinchenpongmonastery.jpg'
+      name: 'Udayagiri Caves',
+      lat: 23.5306,
+      lng: 77.8053,
+      description: 'Rock-cut caves with important Hindu iconography from Gupta period.',
+      image: '/img/bhimbetka.png'
     },
     {
       id: 11,
-      name: 'Zong Dog Palri Fo-Brang Monastery',
-      lat: 27.29,
-      lng: 88.23,
-      description: 'Also known as "Palace Monastery", located near Pemayangtse.',
-      image: './img/ZangDhokPalriPhodang.jpg'
+      name: 'Bhojpur Temple',
+      lat: 23.4917,
+      lng: 77.6244,
+      description: 'Incomplete temple with one of India\'s largest Shiva lingams.',
+      image: '/img/bhojpur_temple.png'
     },
     {
       id: 12,
-      name: 'Sanga Choeling Monastery',
-      lat: 27.29,
-      lng: 88.23,
-      description: 'Founded in 1697, accessible by a steep trek from Pelling.',
-      image: './img/SangaChoelingMonastery.jpg'
+      name: 'Chaturbhuj Temple',
+      lat: 25.3523,
+      lng: 78.6397,
+      description: 'Unique temple blending palace, fort, and temple architecture.',
+      image: '/img/orchha_fort.png'
     },
     {
       id: 13,
-      name: 'Bongtang Monastery',
-      lat: 27.3690385,
-      lng: 88.6132007,
-      description: 'Also known as Gonjang Monastery, established in 1981. It follows the Nyingma school of Tibetan Buddhism and is located near Tashi Viewpoint in Gangtok.',
-      image: './img/BongtangMonastery.jpg'
+      name: 'Dhar Fort',
+      lat: 22.5976,
+      lng: 75.2976,
+      description: 'Ancient fort with rich Paramara dynasty heritage.',
+      image: '/img/jahaz_mahal.png'
     },
     {
       id: 14,
-      name: 'Lingdum (Ranka) Monastery',
-      lat: 27.3347,
-      lng: 88.6416,
-      description: 'A relatively new but very large monastery near Gangtok.',
-      image: './img/Lingdum(Ranka)Monastery.jpg'
+      name: 'Mandu Fort Complex',
+      lat: 22.3623,
+      lng: 75.3965,
+      description: 'Afghan architecture showcase with palaces and monuments.',
+      image: '/img/jahaz_mahal.png'
     },
     {
       id: 15,
-      name: 'Gonjang Monastery',
-      lat: 27.36908,
-      lng: 88.613314,
-      description: 'Located near Tashi View Point, built in 1981.',
-      image: './img/GonjangMonastery.jpeg'
+      name: 'Jain Temples of Sonagiri',
+      lat: 25.7102,
+      lng: 78.3756,
+      description: 'Important Jain pilgrimage site with white temples on hilltop.',
+      image: '/img/khajuraho.png'
     }
   ];
 
@@ -151,11 +151,11 @@ const Home = () => {
   const initializeMap = () => {
     if (window.google && window.google.maps && mapRef.current) {
       // Center of Sikkim
-      const sikkimCenter = { lat: 27.5330, lng: 88.5122 };
-      
+      const mpCenter = { lat: 23.2599, lng: 77.4126 }; // Center of Madhya Pradesh (Bhopal)
+
       const map = new window.google.maps.Map(mapRef.current, {
-        zoom: 10,
-        center: sikkimCenter,
+        zoom: 7,
+        center: mpCenter,
         mapTypeId: 'terrain',
         styles: [
           {
@@ -206,7 +206,7 @@ const Home = () => {
     try {
       const response = await storyAPI.getAllStories({ status: 'approved' });
       const approvedStories = response.data.stories;
-      
+
       // Separate by type
       setPhotos(approvedStories.filter(story => story.type === 'photo'));
       setVideos(approvedStories.filter(story => story.type === 'video'));
@@ -221,41 +221,39 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="hero">
         <video autoPlay muted loop className="video-background">
-          <source src="/video/background_vid.mp4" type="video/mp4" />
+          <source src="/video/InShot_20260106_230746648.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-content">
-          <h1>Discover Have-In-Sikkim</h1>
+          <h1>Discover Madhya Pradesh Heritage</h1>
           <p>
-            Explore the ancient monasteries of Sikkim through immersive virtual tours 
-            and a rich digital archive. Experience the cultural heritage and spiritual 
+            Explore the ancient temples and monuments of Madhya Pradesh through immersive virtual tours
+            and a rich digital archive. Experience the cultural heritage and spiritual
             essence of these sacred sites from anywhere in the world.
           </p>
-          <a 
-            href="https://www.360easyvr.com/vr/9098?scene_id=25635" 
-            className="btn" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <a
+            href="/virtual-tours"
+            className="btn"
           >
             Start Exploring
           </a>
         </div>
       </section>
 
-      {/* Sikkim Map Section */}
-      <section id="sikkim-map">
-        <h2>Interactive Map of Sikkim Monasteries</h2>
+      {/* MP Heritage Map Section */}
+      <section id="mp-map">
+        <h2>Interactive Map of MP Heritage Sites</h2>
         <div className="map-container">
-          <div 
+          <div
             ref={mapRef}
-            id="map" 
-            style={{ 
-              height: '400px', 
-              background: '#e0e0e0', 
+            id="map"
+            style={{
+              height: '400px',
+              background: '#e0e0e0',
               borderRadius: '8px',
               width: '100%'
             }}
@@ -265,10 +263,10 @@ const Home = () => {
               <>
                 <h4>{selectedMonastery.name}</h4>
                 <div className="img">
-                  <img 
-                    src={selectedMonastery.image} 
-                    alt={selectedMonastery.name} 
-                    id="monastery-img" 
+                  <img
+                    src={selectedMonastery.image}
+                    alt={selectedMonastery.name}
+                    id="monastery-img"
                     onError={(e) => {
                       e.target.src = 'https://via.placeholder.com/400x300?text=' + selectedMonastery.name;
                     }}
@@ -718,7 +716,7 @@ const Home = () => {
           </div>
         </section>
       )}
-      
+
       <FloatingChatbot />
     </>
   );

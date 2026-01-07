@@ -27,7 +27,7 @@ const eventSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['Festival', 'Ceremony', 'Prayer', 'Cultural', 'Other'],
+    enum: ['Festival', 'Ceremony', 'Prayer', 'Cultural', 'Tribal', 'Other'],
     default: 'Festival'
   },
   image: {

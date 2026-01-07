@@ -306,13 +306,13 @@ nav .explore-btn {
 
 /* Remove old AI popup styles (now single chatbot) */
 
-/* Sikkim Map Section */
-#sikkim-map {
+/* Madhya Pradesh Map Section */
+#mp-map {
     padding: 40px 20px;
     background: #f9f9f9;
 }
 
-#sikkim-map h2 {
+#mp-map h2 {
     text-align: center;
     font-size: 28px;
     margin-bottom: 20px;
@@ -335,7 +335,7 @@ nav .explore-btn {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-#monastery-details {
+#heritage-details {
     flex: 1 1 300px;
     min-width: 250px;
     max-width: 500px;
@@ -348,7 +348,7 @@ nav .explore-btn {
     align-items: center;
 }
 
-#monastery-details h4 {
+#heritage-details h4 {
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -362,7 +362,7 @@ nav .explore-btn {
     flex-shrink: 0;
 }
 
-.monastery-desc p {
+.heritage-desc p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
@@ -625,7 +625,7 @@ nav .explore-btn {
   .hero-content h1 { font-size: 2rem; }
   .hero-content p { font-size: 1rem; padding: 0 10px; }
   #map { height: 360px; }
-  #monastery-img { height: 260px; }
+  #heritage-img { height: 260px; }
 }
 @media (max-width: 480px) {
   nav { padding: 12px 16px; }

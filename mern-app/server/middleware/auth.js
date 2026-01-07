@@ -93,3 +93,28 @@ exports.isUser = (req, res, next) => {
     });
   }
 };
+
+// Authorize specific roles
+exports.authorize = (...roles) => {
+  return (req, res, next) => {
+    if (!req.user) {
+      return res.status(401).json({
+        success: false,
+        message: 'Not authenticated'
+      });
+    }
+
+    // Convert role to lowercase for comparison
+    const userRole = req.user.role ? req.user.role.toLowerCase() : '';
+    const allowedRoles = roles.map(role => role.toLowerCase());
+
+    if (!allowedRoles.includes(userRole) && userRole !== 'admin') {
+      return res.status(403).json({
+        success: false,
+        message: `User role '${req.user.role}' is not authorized to access this route`
+      });
+    }
+
+    next();
+  };
+};

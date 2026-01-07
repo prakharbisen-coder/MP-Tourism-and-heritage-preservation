@@ -14,9 +14,9 @@ const getAuthConfig = () => {
 
 /**
  * Compare two images using the preservation analysis system
- * @param {File} baselineFile - Baseline monastery image
- * @param {File} comparisonFile - Current monastery image for comparison
- * @param {Object} metadata - Additional metadata (monasteryName, location)
+ * @param {File} baselineFile - Baseline heritage site image
+ * @param {File} comparisonFile - Current heritage site image for comparison
+ * @param {Object} metadata - Additional metadata (siteName, location)
  * @returns {Promise} - Analysis results
  */
 export const compareImages = async (baselineFile, comparisonFile, metadata = {}) => {

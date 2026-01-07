@@ -1,5 +1,5 @@
 """
-Image Processing Module for Monastery Preservation
+Image Processing Module for Heritage Preservation
 Uses OpenCV and SSIM for structural similarity comparison
 Detects minute differences and generates highlighted difference images
 """

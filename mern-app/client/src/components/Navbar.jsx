@@ -16,10 +16,11 @@ const Navbar = () => {
     <>
       {/* Main Navbar */}
       <nav>
-        <div className="logo">Have-In-Sikkim</div>
+        <div className="logo">Have-In-MP</div>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/monasteries">Monasteries</Link></li>
+          <li><Link to="/monasteries">Heritage Sites</Link></li>
+          <li><Link to="/properties">Book Stay</Link></li>
           <li><Link to="/navigation">Navigation</Link></li>
           <li><Link to="/virtual-tours">Virtual Tours</Link></li>
           <li><Link to="/events">Events</Link></li>
@@ -48,7 +49,8 @@ const Navbar = () => {
         <span className="close-btn" onClick={() => setSideMenuOpen(false)}>✖</span>
         <ul>
           <li><Link to="/" onClick={() => setSideMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/monasteries" onClick={() => setSideMenuOpen(false)}>Monasteries</Link></li>
+          <li><Link to="/monasteries" onClick={() => setSideMenuOpen(false)}>Heritage Sites</Link></li>
+          <li><Link to="/properties" onClick={() => setSideMenuOpen(false)}>Book Stay</Link></li>
           <li><Link to="/navigation" onClick={() => setSideMenuOpen(false)}>Navigation</Link></li>
           <li><Link to="/virtual-tours" onClick={() => setSideMenuOpen(false)}>Virtual Tours</Link></li>
           <li><Link to="/events" onClick={() => setSideMenuOpen(false)}>Events</Link></li>

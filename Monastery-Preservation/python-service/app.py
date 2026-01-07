@@ -1,5 +1,5 @@
 """
-Flask API for Monastery Preservation Image Comparison Service
+Flask API for Heritage Preservation Image Comparison Service
 Receives images from Node.js backend and performs SSIM-based comparison
 """
 

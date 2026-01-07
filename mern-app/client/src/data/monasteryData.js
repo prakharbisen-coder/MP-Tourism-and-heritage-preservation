@@ -1,145 +1,145 @@
-// Monastery data for offline chatbot
+// Heritage Temple data for offline chatbot - Madhya Pradesh
 export const monasteries = [
   { 
-    name: "Rumtek Monastery", 
-    location: "Gangtok, East Sikkim", 
-    sect: "Kagyu", 
-    founded: "16th century (rebuilt in 1960s)", 
-    history: "Seat of the Karmapa Lama, also known as Dharma Chakra Centre. Largest monastery in Sikkim.", 
-    wiki: "https://en.wikipedia.org/wiki/Rumtek_Monastery" 
+    name: "Khajuraho Temples", 
+    location: "Khajuraho, Chhatarpur District", 
+    sect: "Hindu", 
+    founded: "950-1050 CE", 
+    history: "UNESCO World Heritage Site known for stunning sculptures and architecture. Built by Chandela dynasty rulers.", 
+    wiki: "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments" 
   },
   { 
-    name: "Pemayangtse Monastery", 
-    location: "Pelling, West Sikkim", 
-    sect: "Nyingma", 
-    founded: "1705", 
-    history: "One of the oldest monasteries, famous for its wooden structure Zangdok Palri.", 
-    wiki: "https://en.wikipedia.org/wiki/Pemayangtse_Monastery" 
+    name: "Mahakaleshwar Temple", 
+    location: "Ujjain, Madhya Pradesh", 
+    sect: "Hindu (Shaivism)", 
+    founded: "Ancient (Current structure 18th century)", 
+    history: "One of the 12 Jyotirlingas, highly revered Shiva temple with unique southward facing lingam.", 
+    wiki: "https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga" 
   },
   { 
-    name: "Tashiding Monastery", 
-    location: "Near Yuksom, West Sikkim", 
-    sect: "Nyingma", 
-    founded: "1641", 
-    history: "Considered the holiest monastery in Sikkim, built by Ngadak Sempa Chempo.", 
-    wiki: "https://en.wikipedia.org/wiki/Tashiding_Monastery" 
+    name: "Omkareshwar Temple", 
+    location: "Omkareshwar, Khandwa District", 
+    sect: "Hindu (Shaivism)", 
+    founded: "Ancient", 
+    history: "Sacred Jyotirlinga temple on an island shaped like Hindu 'Om' symbol on the Narmada River.", 
+    wiki: "https://en.wikipedia.org/wiki/Omkareshwar" 
   },
   { 
-    name: "Phodong Monastery", 
-    location: "North Sikkim", 
-    sect: "Kagyu", 
-    founded: "1740", 
-    history: "Known for its frescoes and annual festivals.", 
-    wiki: "https://en.wikipedia.org/wiki/Phodong_Monastery" 
+    name: "Sanchi Stupa", 
+    location: "Sanchi, Raisen District", 
+    sect: "Buddhist", 
+    founded: "3rd century BCE", 
+    history: "Ancient Buddhist complex commissioned by Emperor Ashoka. UNESCO World Heritage Site.", 
+    wiki: "https://en.wikipedia.org/wiki/Sanchi" 
   },
   { 
-    name: "Enchey Monastery", 
-    location: "Gangtok, East Sikkim", 
-    sect: "Nyingma", 
-    founded: "1909", 
-    history: "Associated with Lama Drupthob Karpo, a tantric master.", 
-    wiki: "https://en.wikipedia.org/wiki/Enchey_Monastery" 
+    name: "Bhimbetka Rock Shelters", 
+    location: "Raisen District", 
+    sect: "Ancient Heritage", 
+    founded: "Paleolithic Age", 
+    history: "UNESCO World Heritage Site with ancient rock paintings dating back over 30,000 years.", 
+    wiki: "https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters" 
   },
   { 
-    name: "Ralong Monastery", 
-    location: "South Sikkim", 
-    sect: "Kagyu", 
-    founded: "18th century", 
-    history: "Famous for the Kagyed Dance Festival and new monastery built in 1995.", 
-    wiki: "https://en.wikipedia.org/wiki/Ralong_Monastery" 
+    name: "Gwalior Fort", 
+    location: "Gwalior, Madhya Pradesh", 
+    sect: "Historical Monument", 
+    founded: "8th century", 
+    history: "One of India's most impregnable fortresses with magnificent palaces and temples.", 
+    wiki: "https://en.wikipedia.org/wiki/Gwalior_Fort" 
   },
   { 
-    name: "Lachung Monastery", 
-    location: "Lachung, North Sikkim", 
-    sect: "Nyingma", 
-    founded: "1880", 
-    history: "Built amidst beautiful mountains, known for mask dance festival.", 
-    wiki: "https://en.wikipedia.org/wiki/Lachung_Monastery" 
+    name: "Chaturbhuj Temple", 
+    location: "Orchha, Tikamgarh District", 
+    sect: "Hindu (Vaishnavism)", 
+    founded: "16th century", 
+    history: "Unique temple with a blend of palace, fort, and temple architecture.", 
+    wiki: "https://en.wikipedia.org/wiki/Orchha" 
   },
   { 
-    name: "Lachen Monastery", 
-    location: "Lachen, North Sikkim", 
-    sect: "Nyingma", 
-    founded: "1858", 
-    history: "Known as Ngodrub Choling, it serves as spiritual center for Lachenpas.", 
-    wiki: "https://en.wikipedia.org/wiki/Lachen_Monastery" 
+    name: "Jahaz Mahal", 
+    location: "Mandu, Dhar District", 
+    sect: "Historical Monument", 
+    founded: "15th century", 
+    history: "Ship Palace built during Afghan rule, appearing to float between two artificial lakes.", 
+    wiki: "https://en.wikipedia.org/wiki/Jahaz_Mahal" 
   },
   { 
-    name: "Dubdi Monastery (Yuksom Monastery)", 
-    location: "Yuksom, West Sikkim", 
-    sect: "Nyingma", 
-    founded: "1701", 
-    history: "First monastery established after Buddhism came to Sikkim.", 
-    wiki: "https://en.wikipedia.org/wiki/Dubdi_Monastery" 
+    name: "Kandariya Mahadev Temple", 
+    location: "Khajuraho, Chhatarpur District", 
+    sect: "Hindu (Shaivism)", 
+    founded: "1030 CE", 
+    history: "Largest and most ornate temple in Khajuraho, epitome of Chandela architecture.", 
+    wiki: "https://en.wikipedia.org/wiki/Kandariya_Mahadeva_Temple" 
   },
   { 
-    name: "Kartok Monastery", 
-    location: "Yuksom, West Sikkim", 
-    sect: "Nyingma", 
-    founded: "17th century", 
-    history: "Important monastery located near Kathok Lake.", 
-    wiki: "https://en.wikipedia.org/wiki/Katok_Monastery" 
+    name: "Udayagiri Caves", 
+    location: "Vidisha, Madhya Pradesh", 
+    sect: "Hindu/Jain", 
+    founded: "Early 5th century CE", 
+    history: "Rock-cut caves with important Hindu iconography from Gupta period.", 
+    wiki: "https://en.wikipedia.org/wiki/Udayagiri_Caves" 
   },
   { 
-    name: "Zong Dog Palri Fo-Brang Gompa", 
-    location: "Kalimpong (near Sikkim, often associated with Buddhist circuit)", 
-    sect: "Nyingma", 
-    founded: "1976", 
-    history: "Inaugurated by Dalai Lama, holds 108 volumes of Kangyur.", 
-    wiki: "https://en.wikipedia.org/wiki/Zang_Dhok_Palri_Phari_Monastery" 
+    name: "Mandu Fort Complex", 
+    location: "Mandu, Dhar District", 
+    sect: "Historical Monument", 
+    founded: "15th-16th century", 
+    history: "Afghan architecture showcase with palaces, mosques and monuments.", 
+    wiki: "https://en.wikipedia.org/wiki/Mandu,_Madhya_Pradesh" 
   },
   { 
-    name: "Sanga Choeling Monastery", 
-    location: "Pelling, West Sikkim", 
-    sect: "Nyingma", 
-    founded: "1697", 
-    history: "One of the oldest monasteries in Sikkim, founded by Lama Lhatsun Chempo.", 
-    wiki: "https://en.wikipedia.org/wiki/Sanga_Choling_Monastery" 
+    name: "Dhar Fort", 
+    location: "Dhar, Madhya Pradesh", 
+    sect: "Historical Monument", 
+    founded: "11th century", 
+    history: "Ancient fort with rich Paramara and Malwa Sultanate heritage.", 
+    wiki: "https://en.wikipedia.org/wiki/Dhar" 
   },
   { 
-    name: "Lingdum Monastery (Ranka Monastery)", 
-    location: "Ranka, near Gangtok", 
-    sect: "Kagyu", 
-    founded: "1998", 
-    history: "Known for its impressive Tibetan architecture and peaceful setting.", 
-    wiki: "https://en.wikipedia.org/wiki/Lingdum_Monastery" 
+    name: "Bhojpur Temple", 
+    location: "Bhojpur, Raisen District", 
+    sect: "Hindu (Shaivism)", 
+    founded: "11th century", 
+    history: "Incomplete temple with one of India's largest Shiva lingams, built by Raja Bhoja.", 
+    wiki: "https://en.wikipedia.org/wiki/Bhojpur,_Madhya_Pradesh" 
   },
   { 
-    name: "Bongtang Monastery", 
-    location: "Near Gangtok, East Sikkim", 
-    sect: "Nyingma", 
-    founded: "20th century", 
-    history: "A smaller monastery known for its calm environment.", 
-    wiki: "https://en.wikipedia.org/wiki/Sikkim" 
+    name: "Orchha Fort Complex", 
+    location: "Orchha, Tikamgarh District", 
+    sect: "Historical Monument", 
+    founded: "16th century", 
+    history: "Medieval fort complex with palaces showcasing Bundela architecture.", 
+    wiki: "https://en.wikipedia.org/wiki/Orchha_Fort_complex" 
   },
   { 
-    name: "Phensang Monastery", 
-    location: "North Sikkim", 
-    sect: "Nyingma", 
-    founded: "1721", 
-    history: "Hosts annual festival before Losoong. Originally built by Lama Jigme Pawo.", 
-    wiki: "https://en.wikipedia.org/wiki/Phensang_Monastery" 
+    name: "Jain Temples of Sonagiri", 
+    location: "Sonagiri, Datia District", 
+    sect: "Jain", 
+    founded: "Ancient", 
+    history: "Important Jain pilgrimage site with white temples on a hilltop.", 
+    wiki: "https://en.wikipedia.org/wiki/Sonagiri" 
   }
 ];
 
-// Helper function to get all unique sects
+// Helper function to get all unique types
 export const getSects = () => {
   return [...new Set(monasteries.map(m => m.sect))];
 };
 
-// Helper function to get monasteries by sect
+// Helper function to get monuments by type
 export const getMonasteriesBySect = (sect) => {
   return monasteries.filter(m => m.sect.toLowerCase() === sect.toLowerCase());
 };
 
-// Helper function to get monasteries by location
+// Helper function to get monuments by location
 export const getMonasteriesByLocation = (location) => {
   return monasteries.filter(m => 
     m.location.toLowerCase().includes(location.toLowerCase())
   );
 };
 
-// Helper function to find monastery by name
+// Helper function to find monument by name
 export const findMonasteryByName = (name) => {
   return monasteries.find(m => 
     m.name.toLowerCase().includes(name.toLowerCase())

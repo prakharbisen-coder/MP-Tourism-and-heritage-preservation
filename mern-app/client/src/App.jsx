@@ -2,6 +2,9 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 
+// Styles
+import './styles/booking.css';
+
 // Pages
 import Home from './pages/Home';
 import Monasteries from './pages/Monasteries';
@@ -14,6 +17,11 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Preservation from './pages/Preservation';
 import Navigation from './pages/Navigation';
+import ArTour from './pages/ArTour';
+import PropertyListing from './pages/PropertyListing';
+import PropertyDetails from './pages/PropertyDetails';
+import BookingCheckout from './pages/BookingCheckout';
+import BookingSuccess from './pages/BookingSuccess';
 
 function App() {
   return (
@@ -26,7 +34,30 @@ function App() {
       <Route path="/events" element={<Events />} />
       <Route path="/chatbot" element={<Chatbot />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/ar-tour" element={<ArTour />} />
       
+      {/* Property & Booking Routes */}
+      <Route path="/properties" element={<PropertyListing />} />
+      <Route path="/properties/:id" element={<PropertyDetails />} />
+
+      {/* Booking Routes */}
+      <Route
+        path="/booking/create"
+        element={
+          <ProtectedRoute>
+            <BookingCheckout />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/booking/success"
+        element={
+          <ProtectedRoute>
+            <BookingSuccess />
+          </ProtectedRoute>
+        }
+      />
+
       {/* Protected User Routes */}
       <Route path="/itinerary" element={<Itinerary />} />
       <Route
@@ -37,7 +68,7 @@ function App() {
           </ProtectedRoute>
         }
       />
-      
+
       {/* Protected Admin Routes */}
       <Route
         path="/admin"

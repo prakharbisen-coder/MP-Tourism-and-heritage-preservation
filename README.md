@@ -1,10 +1,10 @@
-# Monastery Preservation Project
+# Madhya Pradesh Heritage Preservation Project
 
-A comprehensive digital heritage platform for Sikkim's monasteries, combining a public-facing web portal with advanced AI-powered preservation tools.
+A comprehensive digital heritage platform for Madhya Pradesh's temples and monuments, combining a public-facing web portal with advanced AI-powered preservation tools.
 
 This repository contains two main applications:
 
-1. **[Have-In-Sikkim Portal (mern-app)](./mern-app)**: A full-stack MERN application for virtual tours, events, and community stories.
+1. **[Explore MP Portal (mern-app)](./mern-app)**: A full-stack MERN application for virtual tours, events, and community stories.
 2. **[Preservation System (Monastery-Preservation)](./Monastery-Preservation)**: An AI-driven image comparison system for structural health monitoring.
 
 ---
@@ -12,7 +12,7 @@ This repository contains two main applications:
 ## 📂 Project Structure
 
 ```
-Monastery-Prototype-main/
+MP-Heritage-Tourism/
 ├── mern-app/                 # Main User Portal (MERN Stack)
 │   ├── client/               # React Frontend
 │   └── server/               # Node.js Backend
@@ -98,7 +98,7 @@ npm run dev
 
 ## 🤝 Contributing
 
-We welcome contributions to help preserve Sikkim's rich heritage! Please check the individual directories for specific contribution guidelines.
+We welcome contributions to help preserve Madhya Pradesh's rich cultural heritage! Please check the individual directories for specific contribution guidelines.
 
 ## 📄 License
 
